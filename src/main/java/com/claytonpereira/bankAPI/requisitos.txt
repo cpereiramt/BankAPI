@@ -19,5 +19,6 @@ o sistema deve gerar o numero da conta e os dados da agencia.
  - nome 
  - sexo
  - telefone
- - conta nº 
+ - conta nº
+ - agencia nº
  
