@@ -1,0 +1,23 @@
+1 - Crie um programa que ira gerenciar 
+contas bancarias dos seus clientes. 
+2 - O programa deve permitir que o usuário 
+crie uma conta no banco informando os 
+seguintes dados: nome do cliente, sexo, telefone, 
+valor a ser depositado na conta. 
+3 - Ao adicionar a conta, 
+o sistema deve gerar o numero da conta e os dados da agencia.
+ 4 - O sistema não deve permitir criar um conta com 
+ o valor do deposito zerado. 
+ 5 - No final o sistema deve imprimir a lista de cliente com todos
+  os dados de cada conta e no final da lista o valor total de
+ recursos que foram depositados no banco;
+ 
+ entidades :
+ 
+ clientes
+ 
+ - nome 
+ - sexo
+ - telefone
+ - conta nº 
+ 
