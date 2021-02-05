@@ -1,42 +1,34 @@
 package com.claytonpereira.bankAPI.model;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
 
 public class Banco {
+	
 	private String bancoName;
 	private String contaNumero;
 	private String agenciaNumero;
-	private double saldoParaDeposito;
+	private String saldoParaDeposito;
 	
-	public Banco(String bancoName)
-	{
-	   
-		
-		this.bancoName = bancoName;
 	
-	  	
-	}
+	
+	private Cliente cliente = new Cliente();
 	 
+	
+    
+	
 	public String getBancoName() {
 		return bancoName;
 	}
-
+	
 	public void setBancoName(String bancoName) {
 		this.bancoName = bancoName;
 	}
 	
-	
-	private List<Cliente> clientes = new ArrayList<Cliente>();
-	
-	public List<Cliente> getClientes() {
-		return clientes;
-	}
-
-	public void setClientes(String nome, char sexo, String telefone) {
-		this.clientes.add(new Cliente(nome,sexo, telefone));
-	}
-	
+		
 	public String getContaNumero() {
 		return contaNumero;
 	}
@@ -50,11 +42,19 @@ public class Banco {
 		this.agenciaNumero = agenciaNumero;
 	}
 	
-	public double getSaldoParaDeposito() {
+	public String getSaldoParaDeposito() {
 		return saldoParaDeposito;
 	}
 
-	public void setSaldoParaDeposito(double saldoParaDeposito) {
-		this.saldoParaDeposito = saldoParaDeposito;
+	public void setSaldoParaDeposito(String saldoParaDeposito2) {
+		this.saldoParaDeposito = saldoParaDeposito2;
+	}
+	
+	public Cliente getCliente() {
+		return cliente;
+	}
+	
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
 }

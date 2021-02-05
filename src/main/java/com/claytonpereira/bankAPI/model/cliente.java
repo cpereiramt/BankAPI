@@ -1,20 +1,16 @@
 package com.claytonpereira.bankAPI.model;
 
+import org.springframework.context.annotation.Configuration;
+
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
+
 public class Cliente {
 
 	private String nome;
-	private char sexo;
+	private String sexo;
 	private String telefone;
  
-	
-	
-	public Cliente(String nome, char sexo,
-     String telefone) {
-		this.nome = nome;
-		this.sexo = sexo;
-		this.telefone = telefone;
-	
-	}
 	
 	public String getNome() {
 		return nome;
@@ -22,10 +18,10 @@ public class Cliente {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public char getSexo() {
+	public String getSexo() {
 		return sexo;
 	}
-	public void setSexo(char sexo) {
+	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
 	public String getTelefone() {

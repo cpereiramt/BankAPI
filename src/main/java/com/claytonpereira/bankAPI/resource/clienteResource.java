@@ -10,6 +10,7 @@ public class clienteResource {
    
 	@RequestMapping(path = "/")
 	public Cliente getClients() {
-		return new Cliente("CLAYTON PEREIRA",'M', "659999-9999");
+		Cliente clientes = new Cliente();
+		return clientes ;
 	}
 }
