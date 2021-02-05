@@ -8,9 +8,9 @@ import com.claytonpereira.bankAPI.model.Banco;
 
 @Service
 public class BancoService {
-    Banco banco;
+   
 	public BancoService() {
-	 banco = new Banco();
+
 	}
 	
 	public String adicionaClienteService( String bancoName,
@@ -21,7 +21,7 @@ public class BancoService {
 			                           String sexo,
 			                           String telefone) 
 	{ 
-		
+		 Banco banco = new Banco();
 	     
 	     banco.setBancoName(bancoName);
 	     banco.setContaNumero(contaNumero);
@@ -30,6 +30,8 @@ public class BancoService {
 	     banco.getCliente().setNome(nome);
 	     banco.getCliente().setSexo(sexo);
 	     banco.getCliente().setTelefone(telefone);
+	     
+	    System.out.println(banco.getCliente().getNome());
 	    
 	
 	

@@ -1,5 +1,8 @@
 package com.claytonpereira.bankAPI.resource;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,29 +17,32 @@ import com.claytonpereira.bankAPI.service.BancoService;
 @RequestMapping("/cadastrarCliente")
 public class BancoResource {
 	
-	BancoService bancoService = new BancoService();
-	Banco banco;
-	
-	public BancoResource() {
-	 banco = new Banco();	
-	}
+	@Autowired
+	BancoService bancoService;
+	 List <Banco> banco = new ArrayList<Banco>();	
 	
 	@GetMapping
-	public Banco getClients() {
+	public List <Banco> getClients() {
 		return banco;
 	}
 	
 	
 	@PostMapping
-	public Banco insertClient(@RequestBody Banco request) {	     
+	public List <Banco> insertClient(@RequestBody Banco request) {	     
+		banco.add(request);
+		System.out.println(request);
 		
-		bancoService.adicionaClienteService( request.getBancoName(),
-				request.getContaNumero(),
-				request.getAgenciaNumero(),
-				request.getSaldoParaDeposito(),
-				request.getCliente().getNome(),
-				request.getCliente().getSexo(),
-				request.getCliente().getTelefone());
+		/*
+		 * 
+		 * banco.setBancoName(request.getBancoName());
+		 * banco.setContaNumero(request.getContaNumero());
+		 * banco.setAgenciaNumero(request.getAgenciaNumero());
+		 * banco.setSaldoParaDeposito(request.getSaldoParaDeposito());
+		 * banco.getCliente().setNome(request.getCliente().getNome());
+		 * banco.getCliente().setSexo(request.getCliente().getSexo());
+		 * banco.getCliente().setTelefone(request.getCliente().getTelefone());
+		 */
+	     
 		  
     return banco;     
 	}

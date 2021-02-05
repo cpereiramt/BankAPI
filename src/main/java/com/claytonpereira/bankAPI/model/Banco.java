@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
-
+@Configuration
 public class Banco {
 	
 	private String bancoName;
@@ -15,8 +15,7 @@ public class Banco {
 	
 	
 	
-	private Cliente cliente = new Cliente();
-	 
+	private Cliente cliente = new Cliente();	 
 	
     
 	

@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Configuration;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
-
+@Configuration
 public class Cliente {
 
 	private String nome;
