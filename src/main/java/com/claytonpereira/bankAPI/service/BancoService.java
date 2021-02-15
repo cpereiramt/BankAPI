@@ -1,6 +1,5 @@
 package com.claytonpereira.bankAPI.service;
 
-import java.io.Console;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,13 +10,21 @@ import com.claytonpereira.bankAPI.model.Banco;
 
 @Service
 public class BancoService {
+	
+	/* 
+	 * flag para controlar se os dados estão validados de acordo
+	 * com as regras de negócio estabelecidas  
+	 */
     boolean estaoOsDadosCorretos = false;
 	public BancoService() {
 
-	}	
+	}
+	
+	//Array to tipo banco para simular a inserção na database	
 	List <Banco> bancoList = new ArrayList<Banco>();
 	
 	
+	// chamado no metodo do resource POST
 	public String adicionaClienteService( String bancoName,
 			                           String contaNumero,
 			                            String agenciaNumero,
@@ -52,12 +59,12 @@ public class BancoService {
 		
 } 
 	
+	//retorna o conteudo do array 
 	public List<Banco> getBanco() {
-		return this.bancoList;
-		
+		return this.bancoList;		
 	}
 	
-	
+	//exclui o elemento do array por index
 	public String deletaCliente(int index) {
 		try {
 			bancoList.remove(index);
@@ -67,7 +74,10 @@ public class BancoService {
 		}		
 		return "cliente removido com sucesso !";		
 	}
-
+     
+	/* função que verifica os dados recebidos da request antes 
+	 * de adicionar ao array que simula a database . 
+	 */
 	private String verificaDados(String bancoName, String contaNumero, String agenciaNumero, String saldoParaDeposito,
 			String nome) {
 		if (Integer.parseInt(saldoParaDeposito) <= 0) {

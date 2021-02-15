@@ -1,9 +1,6 @@
 package com.claytonpereira.bankAPI.model;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
 @Configuration
 public class Banco {
@@ -14,7 +11,10 @@ public class Banco {
 	private String saldoParaDeposito;
 	
 	
-	
+	/*
+	 * A cada banco criado, é criado um cliente também, 
+	 * ou seja relacionamento de um para um .
+	 */	
 	private Cliente cliente = new Cliente();	 
 	
     

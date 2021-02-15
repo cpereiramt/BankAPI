@@ -2,7 +2,6 @@ package com.claytonpereira.bankAPI.model;
 
 import org.springframework.context.annotation.Configuration;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
 @Configuration
 public class Cliente {
