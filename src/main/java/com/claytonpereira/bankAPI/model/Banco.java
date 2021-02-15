@@ -1,22 +1,33 @@
 package com.claytonpereira.bankAPI.model;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class Banco {
+	
+	private String bancoName;
 	private String contaNumero;
 	private String agenciaNumero;
+	private String saldoParaDeposito;
 	
-	private List<Cliente> clientes = new ArrayList<Cliente>();
 	
-	public List<Cliente> getClientes() {
-		return clientes;
+	/*
+	 * A cada banco criado, é criado um cliente também, 
+	 * ou seja relacionamento de um para um .
+	 */	
+	private Cliente cliente = new Cliente();	 
+	
+    
+	
+	public String getBancoName() {
+		return bancoName;
 	}
-
-	public void setClientes(List<Cliente> clientes) {
-		this.clientes = clientes;
+	
+	public void setBancoName(String bancoName) {
+		this.bancoName = bancoName;
 	}
 	
+		
 	public String getContaNumero() {
 		return contaNumero;
 	}
@@ -28,5 +39,21 @@ public class Banco {
 	}
 	public void setAgenciaNumero(String agenciaNumero) {
 		this.agenciaNumero = agenciaNumero;
+	}
+	
+	public String getSaldoParaDeposito() {
+		return saldoParaDeposito;
+	}
+
+	public void setSaldoParaDeposito(String saldoParaDeposito2) {
+		this.saldoParaDeposito = saldoParaDeposito2;
+	}
+	
+	public Cliente getCliente() {
+		return cliente;
+	}
+	
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
 }
