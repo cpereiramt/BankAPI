@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
 @Configuration
 public class Cliente {
-
 	private String nome;
 	private String sexo;
 	private String telefone;
