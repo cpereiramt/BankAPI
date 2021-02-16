@@ -1,9 +1,9 @@
 package com.claytonpereira.bankAPI.model;
 
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 
-@Configuration
+@Component
 public class Cliente {
 	private String nome;
 	private String sexo;
